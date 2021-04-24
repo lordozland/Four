@@ -2,4 +2,11 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: black;
     color: rgba(255, 0, 0, 0.658);
+    justify-content: center;
+}
+
+div {
+    justify-content: center;
+    background-color: white;
+    color: black;
 }
