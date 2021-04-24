@@ -7,7 +7,7 @@
 }
 
 body {
-    margin: 20px;
+    margin: 50px;
 }
 
 header {
@@ -20,5 +20,6 @@ div {
     justify-content: center;
     color: black;
     padding: 50px;
-
+    border: 20px;
+    border-color: burlywood;
 }
