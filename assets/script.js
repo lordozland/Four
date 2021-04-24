@@ -8,10 +8,9 @@ var imgEl = document.querySelectorAll("img");
 
 var One = document.getElementById("One");
 
-bodz.addEventListener("click", function(event) {
-    console.log("click");
-
-});
+// bodz.addEventListener("click", function() {
+//     console.log("click");
+// });
 
 
 
