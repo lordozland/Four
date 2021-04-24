@@ -16,4 +16,4 @@ var firstChildUl = document.getElementById("first-child-ul");
 
 var One = document.getElementById("One")
 
-document.getElementById("main").style.justifyContent = "space-between";
+document.getElementById("main").style.justifyContent = "center";

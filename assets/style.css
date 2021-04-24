@@ -5,6 +5,15 @@
     justify-content: center;
 }
 
+body {
+    margin: 20px;
+}
+
+header {
+    padding: 100px;
+    text-align: center;
+}
+
 div {
     justify-content: center;
     background-color: white;
