@@ -3,6 +3,7 @@
     background-color: black;
     color: rgba(255, 0, 0, 0.658);
     justify-content: center;
+    text-align: center;
 }
 
 body {
@@ -11,13 +12,13 @@ body {
 
 header {
     padding: 100px;
-    text-align: center;
     font-size: 150px;
 
 }
 
 div {
     justify-content: center;
-    background-color: white;
     color: black;
+    padding: 50px;
+
 }
