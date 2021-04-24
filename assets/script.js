@@ -2,15 +2,19 @@
 // git remote add origin git@github.com:lordozland/Four.git
 //git push -u origin main
 
-var body = document.querySelectorAll("body");
+var bodz = document.getElementById("bodz");
 var pTags = document.querySelectorAll("p");
 var imgEl = document.querySelectorAll("img");
 
 var One = document.getElementById("One");
 
+bodz.addEventListener("click", function(event) {
+    console.log("click");
 
-console.log("click")
-console.log(document.body);
+});
+
+
+
 
 console.log("Children of Document Body: ")
 console.log(document.body.children);
