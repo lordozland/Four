@@ -1,7 +1,10 @@
 var boswer = document.getElementById('chere');
 
 $( "#chere" ).click(function() {
-    alert( "Handler for .click() called." );
+    console.log("hit");
+    localStorage.setItem("duck");
+    var duck = localStorage.getItem("duck");
+    console.log(duck);
   });
 
 // boswer.addEventListener("click" function{
