@@ -1,23 +1,8 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: black;
-    color: rgba(255, 0, 0, 0.658);
-    justify-content: center;
-    text-align: center;
+    font-family: 'Crimson Text', serif;
+    color: #80cbc4 
 }
 
-body {
-    margin: 50px;
-}
-
-header {
-    padding: 100px;
-    font-size: 150px;
-
-}
-
-.One {
-    justify-content: center;
-    color: black;
-    padding: 50px;
+h1 {
+    
 }

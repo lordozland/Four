@@ -1,26 +1,25 @@
-// git branch -M main
-// git remote add origin git@github.com:lordozland/Four.git
-//git push -u origin main
+var boswer = document.getElementById('chere');
 
-var bodz = document.getElementById("bodz");
-var pTags = document.querySelectorAll("p");
-var imgEl = document.querySelectorAll("img");
+boswer.addEventListener('click', function() {
+    console.log("click")
+});
 
-var One = document.getElementById("One");
+// var count = localStorage.getItem("count");
 
-// bodz.addEventListener("click", function() {
-//     console.log("click");
+
+
+// addButton.addEventListener("click", function() {
+//   if (count < 24) {
+//     count++;
+//     counter.textContent = count;
+//     localStorage.setItem("count", count);
+//   }
 // });
 
-
-
-
-console.log("Children of Document Body: ")
-console.log(document.body.children);
-
-console.log("Second child of body: ")
-console.log(document.body.children[1]);
-
-
-
-One.style.backgroundColor = "white";
+// subtractButton.addEventListener("click", function() {
+//   if (count > 0) {
+//     count--;
+//     counter.textContent = count;
+//     localStorage.setItem("count", count);
+//   }
+// });
