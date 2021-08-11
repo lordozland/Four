@@ -1,10 +1,17 @@
-var boswer = document.getElementById('chere');
+// var boswer = document.getElementById('chere');
 
 $( "#chere" ).click(function() {
     console.log("hit");
     localStorage.setItem("duck", "duck1");
     var duck = localStorage.getItem("duck");
     console.log(duck);
+  });
+
+$( "#Here" ).click(function() {
+    console.log("crash");
+    localStorage.setItem("falcon", "falcon1");
+    var falcon = localStorage.getItem("falcon");
+    console.log(falcon);
   });
 
 // boswer.addEventListener("click" function{
