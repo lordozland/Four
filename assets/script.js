@@ -1,8 +1,12 @@
 var boswer = document.getElementById('chere');
 
-boswer.addEventListener('click', function() {
-    console.log("click")
+boswer.click(function() {
+    localStorage.setItem("got", click)
+    var lockling = localStorage.getItem(click);
+    console.log(lockling)
 });
+
+
 
 // var count = localStorage.getItem("count");
 
