@@ -1,11 +1,18 @@
 var boswer = document.getElementById('chere');
 
-boswer.click(function() {
-    localStorage.setItem("got", click)
-    var lockling = localStorage.getItem(click);
-    console.log(lockling)
-});
+$( "#chere" ).click(function() {
+    alert( "Handler for .click() called." );
+  });
 
+// boswer.addEventListener("click" function{
+    
+// })
+
+// boswer.click(function() {
+//     localStorage.setItem("got", click)
+//     var lockling = localStorage.getItem(click);
+//     console.log(lockling)
+// });
 
 
 // var count = localStorage.getItem("count");
