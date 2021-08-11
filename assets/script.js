@@ -2,7 +2,7 @@ var boswer = document.getElementById('chere');
 
 $( "#chere" ).click(function() {
     console.log("hit");
-    localStorage.setItem("duck");
+    localStorage.setItem("duck", "duck1");
     var duck = localStorage.getItem("duck");
     console.log(duck);
   });
