@@ -5,6 +5,11 @@ var answerOne = "One";
 console.log(answerOne);
 console.log(gradeOne);
 
+var gradeTwo = 0;
+var answerTwo = "Two";
+console.log(answerTwo);
+console.log(gradeTwo);
+
 
 
 // Question One
@@ -38,11 +43,32 @@ function FacePlant1() {
   };
 
 $( "#buttTwo" ).click(function() {
+    event.preventDefault();
     console.log("crash1");
     localStorage.setItem("falcon1", "falcon1");
     var falcon1 = localStorage.getItem("falcon1");
     console.log(falcon1);
+
+    var A2 = {
+        answer: answerTwo,
+        grade: gradeTwo,
+    };
+
+    localStorage.setItem("A2", JSON.stringify(A2));
+    FacePlant2();
+
   });
+
+
+  function FacePlant2() {
+    var curScoreTwo = JSON.parse(localStorage.getItem("A2"));
+    if (curScoreTwo !== null) {
+      document.querySelector("#Score").textContent = curScoreTwo.answer + 
+      " Current Score: " + curScoreTwo.grade
+    }
+  };
+
+
 
   $( "#buttThree" ).click(function() {
     console.log("splash1");
