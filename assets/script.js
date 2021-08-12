@@ -20,8 +20,8 @@ $( "#buttOne" ).click(function(event) {
     
 
     var A1 = {
-        answer: answerOne.text,
-        grade: gradeOne.value,
+        answer: answerOne,
+        grade: gradeOne,
     };
 
     localStorage.setItem("A1", JSON.stringify(A1));
@@ -30,10 +30,10 @@ $( "#buttOne" ).click(function(event) {
   });
 
 function FacePlant1() {
-    var curScore = JSON.parse(localStorage.getItem("A1"));
-    if (curScore !== null) {
-      document.querySelector("#Score").textContent = curScore.answerOne + 
-      " Current Score: " + curScore.gradeOne
+    var curScoreOne = JSON.parse(localStorage.getItem("A1"));
+    if (curScoreOne !== null) {
+      document.querySelector("#Score").textContent = curScoreOne.answer + 
+      " Current Score: " + curScoreOne.grade
     }
   };
 
