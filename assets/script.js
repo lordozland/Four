@@ -1,41 +1,36 @@
 // Variables
 
 var gradeOne = 10;
-var answerOne = "One";
+var answerOne = "One!";
 console.log(answerOne);
 console.log(gradeOne);
 
 var gradeTwo = 0;
-var answerTwo = "Two";
+var answerTwo = "Two....";
 console.log(answerTwo);
 console.log(gradeTwo);
 
 var gradeThree = 0;
-var answerThree = "Three";
+var answerThree = "Three...";
 console.log(answerThree);
 console.log(gradeThree);
 
 var gradeFour = 5;
-var answerFour = "What a Kiss Ass!!! ";
+var answerFour = "Excellent! ";
 console.log(answerFour);
 console.log(gradeFour);
 
 // Question One
 
 $( "#buttOne" ).click(function(event) {
-    event.preventDefault();
-    console.log("hat1");
-    localStorage.setItem("duck1", "duck1");
-    var duck1 = localStorage.getItem("duck1");
-    console.log(duck1);
-
-    // Changes
-    
-
     var A1 = {
         answer: answerOne,
         grade: gradeOne,
     };
+
+    localStorage.removeItem("A4");
+    localStorage.removeItem("A2");
+    localStorage.removeItem("A3"); 
 
     localStorage.setItem("A1", JSON.stringify(A1));
     FacePlant1();
@@ -45,22 +40,20 @@ $( "#buttOne" ).click(function(event) {
 function FacePlant1() {
     var curScoreOne = JSON.parse(localStorage.getItem("A1"));
     if (curScoreOne !== null) {
-      document.querySelector("#Score").textContent = curScoreOne.answer + 
+      document.querySelector("#Score1").textContent = curScoreOne.answer + 
       " Current Score: " + curScoreOne.grade
     }
   };
 
 $( "#buttTwo" ).click(function(event) {
-    event.preventDefault();
-    console.log("crash1");
-    localStorage.setItem("falcon1", "falcon1");
-    var falcon1 = localStorage.getItem("falcon1");
-    console.log(falcon1);
-
     var A2 = {
         answer: answerTwo,
         grade: gradeTwo,
     };
+
+    localStorage.removeItem("A1");
+    localStorage.removeItem("A4");
+    localStorage.removeItem("A3"); 
 
     localStorage.setItem("A2", JSON.stringify(A2));
     FacePlant2();
@@ -71,7 +64,7 @@ $( "#buttTwo" ).click(function(event) {
   function FacePlant2() {
     var curScoreTwo = JSON.parse(localStorage.getItem("A2"));
     if (curScoreTwo !== null) {
-      document.querySelector("#Score").textContent = curScoreTwo.answer + 
+      document.querySelector("#Score1").textContent = curScoreTwo.answer + 
       " Current Score: " + curScoreTwo.grade
     }
   };
@@ -79,15 +72,14 @@ $( "#buttTwo" ).click(function(event) {
 
 
   $( "#buttThree" ).click(function() {
-    console.log("splash1");
-    localStorage.setItem("raven1", "raven1");
-    var raven1 = localStorage.getItem("raven1");
-    console.log(raven1);
-
     var A3 = {
         answer: answerThree,
         grade: gradeThree,
     };
+
+    localStorage.removeItem("A1");
+    localStorage.removeItem("A2");
+    localStorage.removeItem("A4"); 
 
     localStorage.setItem("A3", JSON.stringify(A3));
     FacePlant3();
@@ -97,32 +89,32 @@ $( "#buttTwo" ).click(function(event) {
   function FacePlant3() {
     var curScoreThree = JSON.parse(localStorage.getItem("A3"));
     if (curScoreThree !== null) {
-      document.querySelector("#Score").textContent = curScoreThree.answer + 
+      document.querySelector("#Score1").textContent = curScoreThree.answer + 
       " Current Score: " + curScoreThree.grade
     }
   };
 
   $( "#buttFour" ).click(function() {
-    console.log("snare1");
-    localStorage.setItem("eagle1", "eagle1");
-    var eagle1 = localStorage.getItem("eagle1");
-    console.log(eagle1);
-
     var A4 = {
         answer: answerFour,
         grade: gradeFour,
     };
 
+    localStorage.removeItem("A1");
+    localStorage.removeItem("A2");
+    localStorage.removeItem("A3"); 
+
     localStorage.setItem("A4", JSON.stringify(A4));
     FacePlant4();
+
 
   });
 
   function FacePlant4() {
     var curScoreFour = JSON.parse(localStorage.getItem("A4"));
     if (curScoreFour !== null) {
-      document.querySelector("#Score").textContent = curScoreFour.answer + 
-      " Ugh.... Score: " + curScoreFour.grade
+      document.querySelector("#Score1").textContent = curScoreFour.answer + 
+      " Points Awarded to Hufflepuff: " + curScoreFour.grade
     }
   };
 
@@ -130,11 +122,23 @@ $( "#buttTwo" ).click(function(event) {
   //   Questions Two  
 
   $( "#buttFive" ).click(function() {
-    console.log("hat2");
-    localStorage.setItem("duck2", "duck2");
-    var duck2 = localStorage.getItem("duck2");
-    console.log(duck2);
+    var A5 = {
+        answer: answerFive,
+        grade: gradeive,
+    };
+
+    localStorage.setItem("A5", JSON.stringify(A5));
+    FacePlant5();
+
   });
+
+  function FacePlant5() {
+    var curScoreFour = JSON.parse(localStorage.getItem("A5"));
+    if (curScoreFour !== null) {
+      document.querySelector("#Score2").textContent = curScoreFour.answer + 
+      " Current Score: " + curScoreFour.grade
+    }
+  };
 
 $( "#buttSix" ).click(function() {
     console.log("crash2");
@@ -200,9 +204,15 @@ $( "#buttSix" ).click(function() {
 // Random Clicker for Q2
 
 var clicks = 0;
-var buttclick = document.getElementById("clicker");
 
-function onClick() {
-clicks += 1;
-document.getElementById("clicks").innerHTML = clicks;
-};
+// function onClick() {
+
+// document.getElementById("clicks").innerHTML = clicks;
+// };
+
+$( "#clicker" ).click(function() {
+    clicks += 1;
+    console.log("clicks");
+    var exOut = document.getElementById("exOut");
+    exOut.innerHTML = clicks
+  });
