@@ -22,6 +22,16 @@ var An6 = "Two...";
 console.log(Gr6);
 console.log(An6);
 
+var Gr7 = 10;
+var An7 = "Three! ";
+console.log(Gr7);
+console.log(An7);
+
+var Gr8 = 5;
+var An8 = "Metal! ";
+console.log(Gr8);
+console.log(An8);
+
 // Question One
 
 $( "#buttOne" ).click(function(event) {
@@ -134,9 +144,13 @@ $( "#buttTwo" ).click(function(event) {
   $( "#buttFive" ).click(function(event) {
     event.preventDefault();
 
+    localStorage.removeItem("A6");
+    localStorage.removeItem("A7");
+    localStorage.removeItem("A8"); 
+
     var A5 = {
-        answer: answerFive,
-        grade: gradeive,
+        answer: An5,
+        grade: Gr5,
     };
 
     localStorage.setItem("A5", JSON.stringify(A5));
