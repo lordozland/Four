@@ -194,3 +194,15 @@ $( "#buttSix" ).click(function() {
 
 // Hi-Scorz
 
+
+
+
+// Random Clicker for Q2
+
+var clicks = 0;
+var buttclick = document.getElementById("clicker");
+
+function onClick() {
+clicks += 1;
+document.getElementById("clicks").innerHTML = clicks;
+};
