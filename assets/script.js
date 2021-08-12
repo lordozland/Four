@@ -10,7 +10,15 @@ var answerTwo = "Two";
 console.log(answerTwo);
 console.log(gradeTwo);
 
+var gradeThree = 0;
+var answerThree = "Three";
+console.log(answerThree);
+console.log(gradeThree);
 
+var gradeFour = 5;
+var answerFour = "What a Kiss Ass";
+console.log(answerFour);
+console.log(gradeFour);
 
 // Question One
 
@@ -42,7 +50,7 @@ function FacePlant1() {
     }
   };
 
-$( "#buttTwo" ).click(function() {
+$( "#buttTwo" ).click(function(event) {
     event.preventDefault();
     console.log("crash1");
     localStorage.setItem("falcon1", "falcon1");
@@ -75,7 +83,24 @@ $( "#buttTwo" ).click(function() {
     localStorage.setItem("raven1", "raven1");
     var raven1 = localStorage.getItem("raven1");
     console.log(raven1);
+
+    var A3 = {
+        answer: answerThree,
+        grade: gradeThree,
+    };
+
+    localStorage.setItem("A3", JSON.stringify(A3));
+    FacePlant2();
+
   });
+
+  function FacePlant3() {
+    var curScoreThree = JSON.parse(localStorage.getItem("A3"));
+    if (curScoreThree !== null) {
+      document.querySelector("#Score").textContent = curScoreThree.answer + 
+      " Current Score: " + curScoreThree.grade
+    }
+  };
 
   $( "#buttFour" ).click(function() {
     console.log("snare1");
@@ -84,6 +109,13 @@ $( "#buttTwo" ).click(function() {
     console.log(eagle1);
   });
 
+  function FacePlant4() {
+    var curScoreFour = JSON.parse(localStorage.getItem("A4"));
+    if (curScoreFour !== null) {
+      document.querySelector("#Score").textContent = curScoreFour.answer + 
+      " Kiss Ass Points: " + curScoreFour.grade
+    }
+  };
 
 
   //   Questions Two  
@@ -149,4 +181,7 @@ $( "#buttSix" ).click(function() {
 
 
 // Timer
+
+
+// Hi-Scorz
 
