@@ -1,5 +1,9 @@
 // Variables
 
+var CurSe1 = localStorage.getItem("CS1");
+console.log(CurSe1);
+
+
 var gradeOne = 10;
 var answerOne = "One!";
 
@@ -203,7 +207,17 @@ $( "#buttTwo" ).click(function(event) {
     if (curScoreFour !== null) {
       document.querySelector("#Score2").textContent = curScoreFour.answer + 
       " Current Score: " + curScoreFour.grade
-    }
+    };
+    allScorz5();
+  };
+
+  function allScorz5() {
+    var getA5 = JSON.parse(localStorage.getItem("A5"));
+    var allScore = document.getElementById("allScore");
+    let letA5 = getA5.grade;
+    localStorage.removeItem("CS2"); 
+    localStorage.setItem("CS2", letA5);
+    allScore.innerHTML = letA5.value + CurSe1.value;
   };
 
 $( "#buttSix" ).click(function() {
