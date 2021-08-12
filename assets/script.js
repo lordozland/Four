@@ -1,7 +1,7 @@
 // var boswer = document.getElementById('chere');
 
 $( "#buttOne" ).click(function() {
-    console.log("hit");
+    console.log("hat");
     localStorage.setItem("duck", "duck1");
     var duck = localStorage.getItem("duck");
     console.log(duck);
@@ -14,33 +14,17 @@ $( "#buttTwo" ).click(function() {
     console.log(falcon);
   });
 
-// boswer.addEventListener("click" function{
-    
-// })
+  $( "#buttThree" ).click(function() {
+    console.log("splash");
+    localStorage.setItem("raven", "raven1");
+    var raven = localStorage.getItem("raven");
+    console.log(raven);
+  });
 
-// boswer.click(function() {
-//     localStorage.setItem("got", click)
-//     var lockling = localStorage.getItem(click);
-//     console.log(lockling)
-// });
+  $( "#buttFour" ).click(function() {
+    console.log("snare");
+    localStorage.setItem("eagle", "eagle1");
+    var eagle = localStorage.getItem("eagle");
+    console.log(eagle);
+  });
 
-
-// var count = localStorage.getItem("count");
-
-
-
-// addButton.addEventListener("click", function() {
-//   if (count < 24) {
-//     count++;
-//     counter.textContent = count;
-//     localStorage.setItem("count", count);
-//   }
-// });
-
-// subtractButton.addEventListener("click", function() {
-//   if (count > 0) {
-//     count--;
-//     counter.textContent = count;
-//     localStorage.setItem("count", count);
-//   }
-// });
