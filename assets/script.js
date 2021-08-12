@@ -2,27 +2,31 @@
 
 var gradeOne = 10;
 var answerOne = "One!";
-console.log(answerOne);
-console.log(gradeOne);
 
 var gradeTwo = 0;
 var answerTwo = "Two....";
-console.log(answerTwo);
-console.log(gradeTwo);
 
 var gradeThree = 0;
 var answerThree = "Three...";
-console.log(answerThree);
-console.log(gradeThree);
 
 var gradeFour = 5;
 var answerFour = "Excellent! ";
-console.log(answerFour);
-console.log(gradeFour);
+
+var Gr5 = 0;
+var An5 = "One...";
+console.log(An5);
+console.log(Gr5);
+
+var Gr6 = 0;
+var An6 = "Two...";
+console.log(Gr6);
+console.log(An6);
 
 // Question One
 
 $( "#buttOne" ).click(function(event) {
+    event.preventDefault();
+
     var A1 = {
         answer: answerOne,
         grade: gradeOne,
@@ -46,6 +50,8 @@ function FacePlant1() {
   };
 
 $( "#buttTwo" ).click(function(event) {
+    event.preventDefault();
+
     var A2 = {
         answer: answerTwo,
         grade: gradeTwo,
@@ -71,7 +77,9 @@ $( "#buttTwo" ).click(function(event) {
 
 
 
-  $( "#buttThree" ).click(function() {
+  $( "#buttThree" ).click(function(event) {
+    event.preventDefault();
+
     var A3 = {
         answer: answerThree,
         grade: gradeThree,
@@ -94,7 +102,9 @@ $( "#buttTwo" ).click(function(event) {
     }
   };
 
-  $( "#buttFour" ).click(function() {
+  $( "#buttFour" ).click(function(event) {
+    event.preventDefault();
+
     var A4 = {
         answer: answerFour,
         grade: gradeFour,
@@ -121,7 +131,9 @@ $( "#buttTwo" ).click(function(event) {
 
   //   Questions Two  
 
-  $( "#buttFive" ).click(function() {
+  $( "#buttFive" ).click(function(event) {
+    event.preventDefault();
+
     var A5 = {
         answer: answerFive,
         grade: gradeive,
