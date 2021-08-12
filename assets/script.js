@@ -16,7 +16,7 @@ console.log(answerThree);
 console.log(gradeThree);
 
 var gradeFour = 5;
-var answerFour = "What a Kiss Ass";
+var answerFour = "What a Kiss Ass!!! ";
 console.log(answerFour);
 console.log(gradeFour);
 
@@ -90,7 +90,7 @@ $( "#buttTwo" ).click(function(event) {
     };
 
     localStorage.setItem("A3", JSON.stringify(A3));
-    FacePlant2();
+    FacePlant3();
 
   });
 
@@ -107,13 +107,22 @@ $( "#buttTwo" ).click(function(event) {
     localStorage.setItem("eagle1", "eagle1");
     var eagle1 = localStorage.getItem("eagle1");
     console.log(eagle1);
+
+    var A4 = {
+        answer: answerFour,
+        grade: gradeFour,
+    };
+
+    localStorage.setItem("A4", JSON.stringify(A4));
+    FacePlant4();
+
   });
 
   function FacePlant4() {
     var curScoreFour = JSON.parse(localStorage.getItem("A4"));
     if (curScoreFour !== null) {
       document.querySelector("#Score").textContent = curScoreFour.answer + 
-      " Kiss Ass Points: " + curScoreFour.grade
+      " Ugh.... Score: " + curScoreFour.grade
     }
   };
 
