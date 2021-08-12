@@ -56,7 +56,17 @@ function FacePlant1() {
     if (curScoreOne !== null) {
       document.querySelector("#Score1").textContent = curScoreOne.answer + 
       " Current Score: " + curScoreOne.grade
-    }
+    };
+    allScorz1();
+  };
+
+  function allScorz1() {
+    var getA1 = JSON.parse(localStorage.getItem("A1"));
+    var allScore = document.getElementById("allScore");
+    let letA1 = getA1.grade;
+    localStorage.removeItem("CS1"); 
+    localStorage.setItem("CS1", letA1);
+    allScore.innerHTML = letA1;
   };
 
 $( "#buttTwo" ).click(function(event) {
@@ -82,7 +92,17 @@ $( "#buttTwo" ).click(function(event) {
     if (curScoreTwo !== null) {
       document.querySelector("#Score1").textContent = curScoreTwo.answer + 
       " Current Score: " + curScoreTwo.grade
-    }
+    };
+    allScorz2();
+  };
+
+  function allScorz2() {
+    var getA2 = JSON.parse(localStorage.getItem("A2"));
+    var allScore = document.getElementById("allScore");
+    let letA2 = getA2.grade;
+    localStorage.removeItem("CS1"); 
+    localStorage.setItem("CS1", letA2);
+    allScore.innerHTML = letA2;
   };
 
 
@@ -110,6 +130,16 @@ $( "#buttTwo" ).click(function(event) {
       document.querySelector("#Score1").textContent = curScoreThree.answer + 
       " Current Score: " + curScoreThree.grade
     }
+    allScorz3();
+  };
+
+  function allScorz3() {
+    var getA3 = JSON.parse(localStorage.getItem("A3"));
+    var allScore = document.getElementById("allScore");
+    let letA3 = getA3.grade;
+    localStorage.removeItem("CS1"); 
+    localStorage.setItem("CS1", letA3);
+    allScore.innerHTML = letA3;
   };
 
   $( "#buttFour" ).click(function(event) {
@@ -135,7 +165,17 @@ $( "#buttTwo" ).click(function(event) {
     if (curScoreFour !== null) {
       document.querySelector("#Score1").textContent = curScoreFour.answer + 
       " Points Awarded to Hufflepuff: " + curScoreFour.grade
-    }
+    };
+    allScorz4();
+  };
+
+  function allScorz4() {
+    var getA4 = JSON.parse(localStorage.getItem("A4"));
+    var allScore = document.getElementById("allScore");
+    let letA4 = getA4.grade;
+    localStorage.removeItem("CS1"); 
+    localStorage.setItem("CS1", letA4);
+    allScore.innerHTML = letA4;
   };
 
 
