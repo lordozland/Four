@@ -1,11 +1,41 @@
+// Variables
+
+var gradeOne = 10;
+var answerOne = "One";
+console.log(answerOne);
+console.log(gradeOne);
+
+
+
 // Question One
 
-$( "#buttOne" ).click(function() {
+$( "#buttOne" ).click(function(event) {
+    event.preventDefault();
     console.log("hat1");
     localStorage.setItem("duck1", "duck1");
     var duck1 = localStorage.getItem("duck1");
     console.log(duck1);
+
+    // Changes
+    
+
+    var A1 = {
+        answer: answerOne.text,
+        grade: gradeOne.value,
+    };
+
+    localStorage.setItem("A1", JSON.stringify(A1));
+    FacePlant1();
+
   });
+
+function FacePlant1() {
+    var curScore = JSON.parse(localStorage.getItem("A1"));
+    if (curScore !== null) {
+      document.querySelector("#Score").textContent = curScore.answerOne + 
+      " Current Score: " + curScore.gradeOne
+    }
+  };
 
 $( "#buttTwo" ).click(function() {
     console.log("crash1");
@@ -59,4 +89,38 @@ $( "#buttSix" ).click(function() {
     var eagle2 = localStorage.getItem("eagle2");
     console.log(eagle2);
   });
+
+
+// Quiz Storage Ideas
+
+// var student = document.getElementById("student-names");
+// var grade = document.getElementById("grades");
+// var comment = document.getElementById("msg");
+// var saveButton = document.getElementById("save");
+// var savedName = document.getElementById("saved-name");
+
+// saveButton.addEventListener("click", function(event) {
+// event.preventDefault();
+
+// var studentGrade = {
+//   student: student.value,
+//   grade: grade.value,
+//   comment: comment.value.trim()
+// };
+
+// localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
+// renderMessage();
+
+// });
+
+// function renderMessage() {
+//   var lastGrade = JSON.parse(localStorage.getItem("studentGrade"));
+//   if (lastGrade !== null) {
+//     document.querySelector(".message").textContent = lastGrade.student + 
+//     " received a/an " + lastGrade.grade
+//   }
+// }
+
+
+// Timer
 

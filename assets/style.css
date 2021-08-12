@@ -3,6 +3,13 @@
     color: #80cbc4 
 }
 
-h1 {
-    
+#buttOne, #buttTwo, #buttThree, #buttFour, #buttFive, #buttSix, #buttSeven, #buttEight {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 100px;
+    height: 30px;
+}
+
+.container {
+    border-radius: 10px;
 }
