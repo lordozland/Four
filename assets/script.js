@@ -1,7 +1,5 @@
 // Variables
 
-var CurSe1 = localStorage.getItem("CS1");
-console.log(CurSe1);
 
 
 var gradeOne = 10;
@@ -18,23 +16,19 @@ var answerFour = "Excellent! ";
 
 var Gr5 = 0;
 var An5 = "One...";
-console.log(An5);
-console.log(Gr5);
+
 
 var Gr6 = 0;
 var An6 = "Two...";
-console.log(Gr6);
-console.log(An6);
+
 
 var Gr7 = 10;
 var An7 = "Three! ";
-console.log(Gr7);
-console.log(An7);
+
 
 var Gr8 = 5;
 var An8 = "Metal! ";
-console.log(Gr8);
-console.log(An8);
+
 
 // Question One
 
@@ -59,7 +53,7 @@ function FacePlant1() {
     var curScoreOne = JSON.parse(localStorage.getItem("A1"));
     if (curScoreOne !== null) {
       document.querySelector("#Score1").textContent = curScoreOne.answer + 
-      " Current Score: " + curScoreOne.grade
+      " Points: " + curScoreOne.grade
     };
     allScorz1();
   };
@@ -214,32 +208,14 @@ $( "#buttTwo" ).click(function(event) {
   function allScorz5() {
     var getA5 = JSON.parse(localStorage.getItem("A5"));
     var allScore = document.getElementById("allScore");
+    var CurSe1 = localStorage.getItem("CS1");
     let letA5 = getA5.grade;
     localStorage.removeItem("CS2"); 
     localStorage.setItem("CS2", letA5);
-    allScore.innerHTML = letA5.value + CurSe1.value;
+    allScore.innerHTML = Number(letA5) + Number(CurSe1);
   };
 
-$( "#buttSix" ).click(function() {
-    console.log("crash2");
-    localStorage.setItem("falcon2", "falcon2");
-    var falcon2 = localStorage.getItem("falcon2");
-    console.log(falcon2);
-  });
 
-  $( "#buttSeven" ).click(function() {
-    console.log("splash2");
-    localStorage.setItem("raven2", "raven2");
-    var raven2 = localStorage.getItem("raven2");
-    console.log(raven2);
-  });
-
-  $( "#buttEight" ).click(function() {
-    console.log("snare2");
-    localStorage.setItem("eagle2", "eagle2");
-    var eagle2 = localStorage.getItem("eagle2");
-    console.log(eagle2);
-  });
 
 
 // Quiz Storage Ideas
