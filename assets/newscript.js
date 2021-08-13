@@ -203,6 +203,7 @@ function startTimer(duration, display) {
         var allScore = document.getElementById("allScore");
         let giveA1 = JSON.parse(localStorage.getItem('A1'));
         allScore.innerHTML = giveA1.score;
+        console.log("all flattery is truth")
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
@@ -471,18 +472,21 @@ function getQuest3() {
 
     btn1.onclick = function QOO(event) {
         event.preventDefault();
-        var A2 = 0;
+        localStorage.removeItem("A3");
     
-        localStorage.removeItem("A2");
+        var A3 = {
+            score: 0,
+        };
     
-        localStorage.setItem("A2", A2);
-    
-        console.log(A2);
-        
-            
+        localStorage.setItem("A3", JSON.stringify(A3));
         var allScore = document.getElementById("allScore");
-        let giveA2 = localStorage.getItem("A2")
-        allScore.innerHTML = giveA2;
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        let giveA2 = JSON.parse(localStorage.getItem('A2'));
+        let giveA3 = JSON.parse(localStorage.getItem('A3'));
+        let add1 = giveA1.score += giveA2.score;
+        let add2 = add1 += giveA3.score;
+        console.log(add2)
+        allScore.innerHTML = add2;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
@@ -491,23 +495,26 @@ function getQuest3() {
         buttons1.removeChild(btnli2);
         buttons1.removeChild(btnli3);
         buttons1.removeChild(btnli4);
-        getQuest3();
+        // endGame();
     }
 
     btn2.onclick = function QOTw(event) {
         event.preventDefault();
-        var A2 = 0;
+        localStorage.removeItem("A3");
     
-        localStorage.removeItem("A2");
+        var A3 = {
+            score: 0,
+        };
     
-        localStorage.setItem("A2", A2);
-    
-        console.log(A2);
-        
-            
+        localStorage.setItem("A3", JSON.stringify(A3));
         var allScore = document.getElementById("allScore");
-        let giveA2 = localStorage.getItem("A2")
-        allScore.innerHTML = giveA2;
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        let giveA2 = JSON.parse(localStorage.getItem('A2'));
+        let giveA3 = JSON.parse(localStorage.getItem('A3'));
+        let add1 = giveA1.score += giveA2.score;
+        let add2 = add1 += giveA3.score;
+        console.log(add2)
+        allScore.innerHTML = add2;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
@@ -516,23 +523,27 @@ function getQuest3() {
         buttons1.removeChild(btnli2);
         buttons1.removeChild(btnli3);
         buttons1.removeChild(btnli4);
-        getQuest3();
+        // endGame();
     }
 
     btn3.onclick = function QOTh(event) {
         event.preventDefault();
-        var A2 = 10;
+        localStorage.removeItem("A3");
     
-        localStorage.removeItem("A2");
+        var A3 = {
+            score: 5,
+        };
     
-        localStorage.setItem("A2", A2);
-    
-        console.log(A2);
-        
-            
+        localStorage.setItem("A3", JSON.stringify(A3));
         var allScore = document.getElementById("allScore");
-        let giveA2 = localStorage.getItem("A2")
-        allScore.innerHTML = giveA2;
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        let giveA2 = JSON.parse(localStorage.getItem('A2'));
+        let giveA3 = JSON.parse(localStorage.getItem('A3'));
+        let add1 = giveA1.score += giveA2.score;
+        let add2 = add1 += giveA3.score;
+        console.log(add2)
+        console.log("because you need them")
+        allScore.innerHTML = add2;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
@@ -541,26 +552,28 @@ function getQuest3() {
         buttons1.removeChild(btnli2);
         buttons1.removeChild(btnli3);
         buttons1.removeChild(btnli4);
-        getQuest3();
+        // endGame();
 
         
     }
 
     btn4.onclick = function QOF(event) {
         event.preventDefault();
-        var A2 = 5;
+        localStorage.removeItem("A3");
     
-        localStorage.removeItem("A2");
+        var A3 = {
+            score: 10,
+        };
     
-        localStorage.setItem("A2", A2);
-    
-        console.log(A2);
-        
-            
+        localStorage.setItem("A3", JSON.stringify(A3));
         var allScore = document.getElementById("allScore");
-        let giveA1 = localStorage.getItem("A1")
-        let giveA2 = localStorage.getItem("A2")
-        allScore.innerHTML = (giveA2 += giveA1);
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        let giveA2 = JSON.parse(localStorage.getItem('A2'));
+        let giveA3 = JSON.parse(localStorage.getItem('A3'));
+        let add1 = giveA1.score += giveA2.score;
+        let add2 = add1 += giveA3.score;
+        console.log(add2)
+        allScore.innerHTML = add2;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
@@ -569,7 +582,7 @@ function getQuest3() {
         buttons1.removeChild(btnli2);
         buttons1.removeChild(btnli3);
         buttons1.removeChild(btnli4);
-        getQuest3();
+        // endGame();
     }
 };
 
