@@ -128,15 +128,14 @@ function startTimer(duration, display) {
         var allScore = document.getElementById("allScore");
         let giveA1 = localStorage.getItem("A1")
         allScore.innerHTML = giveA1;
-        
-            QA1.removeChild(node1);
-    QA1.removeChild(node2);
-    QA1.removeChild(node3);
-    QA1.removeChild(node4);
-    buttons1.removeChild(btnli1);
-    buttons1.removeChild(btnli2);
-    buttons1.removeChild(btnli3);
-    buttons1.removeChild(btnli4);
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
         getQuest2();
     }
 
@@ -149,14 +148,14 @@ function startTimer(duration, display) {
         localStorage.setItem("A1", A1);
     
         console.log(A1);
-            QA1.removeChild(node1);
-    QA1.removeChild(node2);
-    QA1.removeChild(node3);
-    QA1.removeChild(node4);
-    buttons1.removeChild(btnli1);
-    buttons1.removeChild(btnli2);
-    buttons1.removeChild(btnli3);
-    buttons1.removeChild(btnli4);
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
         getQuest2();
 
         
@@ -171,14 +170,14 @@ function startTimer(duration, display) {
         localStorage.setItem("A1", A1);
     
         console.log(A1);
-            QA1.removeChild(node1);
-    QA1.removeChild(node2);
-    QA1.removeChild(node3);
-    QA1.removeChild(node4);
-    buttons1.removeChild(btnli1);
-    buttons1.removeChild(btnli2);
-    buttons1.removeChild(btnli3);
-    buttons1.removeChild(btnli4);
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
         getQuest2();
 
 
@@ -193,14 +192,14 @@ function startTimer(duration, display) {
         localStorage.setItem("A1", A1);
     
         console.log(A1);
-            QA1.removeChild(node1);
-    QA1.removeChild(node2);
-    QA1.removeChild(node3);
-    QA1.removeChild(node4);
-    buttons1.removeChild(btnli1);
-    buttons1.removeChild(btnli2);
-    buttons1.removeChild(btnli3);
-    buttons1.removeChild(btnli4);
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
         getQuest2();
 
     }
@@ -299,15 +298,14 @@ function getQuest2() {
         var allScore = document.getElementById("allScore");
         let giveA2 = localStorage.getItem("A2")
         allScore.innerHTML = giveA2;
-        
-            QA1.removeChild(node1);
-    QA1.removeChild(node2);
-    QA1.removeChild(node3);
-    QA1.removeChild(node4);
-    buttons1.removeChild(btnli1);
-    buttons1.removeChild(btnli2);
-    buttons1.removeChild(btnli3);
-    buttons1.removeChild(btnli4);
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
         getQuest3();
     }
 
@@ -325,14 +323,14 @@ function getQuest2() {
         var allScore = document.getElementById("allScore");
         let giveA2 = localStorage.getItem("A2")
         allScore.innerHTML = giveA2;
-            QA1.removeChild(node1);
-    QA1.removeChild(node2);
-    QA1.removeChild(node3);
-    QA1.removeChild(node4);
-    buttons1.removeChild(btnli1);
-    buttons1.removeChild(btnli2);
-    buttons1.removeChild(btnli3);
-    buttons1.removeChild(btnli4);
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
         getQuest3();
     }
 
@@ -350,14 +348,14 @@ function getQuest2() {
         var allScore = document.getElementById("allScore");
         let giveA2 = localStorage.getItem("A2")
         allScore.innerHTML = giveA2;
-            QA1.removeChild(node1);
-    QA1.removeChild(node2);
-    QA1.removeChild(node3);
-    QA1.removeChild(node4);
-    buttons1.removeChild(btnli1);
-    buttons1.removeChild(btnli2);
-    buttons1.removeChild(btnli3);
-    buttons1.removeChild(btnli4);
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
         getQuest3();
 
         
@@ -378,14 +376,14 @@ function getQuest2() {
         let giveA1 = localStorage.getItem("A1")
         let giveA2 = localStorage.getItem("A2")
         allScore.innerHTML = (giveA2 + giveA1);
-            QA1.removeChild(node1);
-    QA1.removeChild(node2);
-    QA1.removeChild(node3);
-    QA1.removeChild(node4);
-    buttons1.removeChild(btnli1);
-    buttons1.removeChild(btnli2);
-    buttons1.removeChild(btnli3);
-    buttons1.removeChild(btnli4);
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
         getQuest3();
     }
 };
