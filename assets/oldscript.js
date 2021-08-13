@@ -47,7 +47,7 @@ $( "#buttOne" ).click(function(event) {
     localStorage.setItem("A1", JSON.stringify(A1));
     FacePlant1();
 
-    startTimer();
+    timerOp();
 
   });
 
@@ -84,6 +84,7 @@ $( "#buttTwo" ).click(function(event) {
     localStorage.setItem("A2", JSON.stringify(A2));
     FacePlant2();
 
+    timerOp();
   });
 
 
@@ -122,6 +123,7 @@ $( "#buttTwo" ).click(function(event) {
     localStorage.setItem("A3", JSON.stringify(A3));
     FacePlant3();
 
+    timerOp();
   });
 
   function FacePlant3() {
@@ -157,6 +159,7 @@ $( "#buttTwo" ).click(function(event) {
     localStorage.setItem("A4", JSON.stringify(A4));
     FacePlant4();
 
+    timerOp();
 
   });
 
@@ -288,7 +291,6 @@ function startTimer(duration, display) {
   // we don't want to wait a full second before the timer starts
   timer();
   setInterval(timer, 1000);
-  timerOp();
 }
 
 function timerOp() {
