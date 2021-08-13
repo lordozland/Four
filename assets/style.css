@@ -12,6 +12,11 @@
     color: black;
 }
 
+#startTimer {
+    background-color: #80cbc4;
+    color: black;
+}
+
 .container {
     border-radius: 10px;
 }
