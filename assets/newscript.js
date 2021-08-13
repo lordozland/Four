@@ -9,6 +9,7 @@ var container = document.getElementById('container')
 var butters = document.getElementById('butters')
 var chere = document.getElementById('chere')
 var skip = document.getElementById('skip')
+var cells = document.getElementById('cells')
 var clicks = 0;
 
 
@@ -587,10 +588,25 @@ function getQuest3() {
 // End Game 
 
 function endGame() {
-    var hiskorz = document.createTextNode("Hi-Skorz")
+    var dividus = document.createElement("h1");
+    var hiskorz = document.createTextNode("Hi-Skorz");
 
-    QN.appendChild(hiskorz);
+    var outers1 = document.createElement("OL")
+    var hsnode1 = document.createElement("LI");                
+    var hstextnode1 = document.createTextNode("HS1");  
+
+
     chere.removeChild(container);
     chere.removeChild(skip);
+    chere.removeChild(cells);
+
+    dividus.appendChild(hiskorz);
+    chere.appendChild(dividus);  
+    
+    hsnode1.appendChild(hstextnode1);     
+
+    outers1.appendChild(hsnode1);
+                         
+    
 
 };
