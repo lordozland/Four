@@ -126,13 +126,7 @@ function startTimer(duration, display) {
             score: 10,
         };
     
-        
-    
         localStorage.setItem("A1", JSON.stringify(A1));
-    
-        console.log(A1.score + 5);
-        
-            
         var allScore = document.getElementById("allScore");
         let giveA1 = JSON.parse(localStorage.getItem('A1'));
         allScore.innerHTML = giveA1.score;
@@ -149,13 +143,15 @@ function startTimer(duration, display) {
 
     btn2.onclick = function QOTw(event) {
         event.preventDefault();
-        var A1 = 0;
     
-        localStorage.removeItem("A1");
-
-        localStorage.setItem("A1", A1);
+        var A1 = {
+            score: 0,
+        };
     
-        console.log(A1);
+        localStorage.setItem("A1", JSON.stringify(A1));
+        var allScore = document.getElementById("allScore");
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        allScore.innerHTML = giveA1.score;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
@@ -171,13 +167,15 @@ function startTimer(duration, display) {
 
     btn3.onclick = function QOTh(event) {
         event.preventDefault();
-        var A1 = 0;
-    
-        localStorage.removeItem("A1");
 
-        localStorage.setItem("A1", A1);
+        var A1 = {
+            score: 0,
+        };
     
-        console.log(A1);
+        localStorage.setItem("A1", JSON.stringify(A1));
+        var allScore = document.getElementById("allScore");
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        allScore.innerHTML = giveA1.score;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
@@ -193,13 +191,15 @@ function startTimer(duration, display) {
 
     btn4.onclick = function QOTh(event) {
         event.preventDefault();
-        var A1 = 5;
-    
-        localStorage.removeItem("A1");
 
-        localStorage.setItem("A1", A1);
+        var A1 = {
+            score: 5,
+        };
     
-        console.log(A1);
+        localStorage.setItem("A1", JSON.stringify(A1));
+        var allScore = document.getElementById("allScore");
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        allScore.innerHTML = giveA1.score;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
