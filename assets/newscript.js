@@ -119,18 +119,23 @@ function startTimer(duration, display) {
 
     btn1.onclick = function QOO(event) {
         event.preventDefault();
-        var A1 = 10;
-    
+        
         localStorage.removeItem("A1");
+
+        var A1 = {
+            score: 10,
+        };
     
-        localStorage.setItem("A1", A1);
+        
     
-        console.log(A1);
+        localStorage.setItem("A1", JSON.stringify(A1));
+    
+        console.log(A1.score + 5);
         
             
         var allScore = document.getElementById("allScore");
-        let giveA1 = localStorage.getItem("A1")
-        allScore.innerHTML = giveA1;
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        allScore.innerHTML = giveA1.score;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
