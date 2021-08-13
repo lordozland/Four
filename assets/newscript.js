@@ -6,6 +6,9 @@ var QA1 = document.getElementById('QA1');
 var buttons1 = document.getElementById('buttons1')
 var dip = document.getElementById('dip')
 var container = document.getElementById('container')
+var butters = document.getElementById('butters')
+var chere = document.getElementById('chere')
+var skip = document.getElementById('skip')
 var clicks = 0;
 
 
@@ -414,11 +417,6 @@ function getQuest3() {
     QN.innerHTML = "Question 3";
     QQ.innerHTML = "Why are JavaScript and Java Interchangible?";
 
-    var divinus = document.createElement("DIV")
-    var dankCode = document.createElement("BUTTON");
-    var wordz = document.createTextNode("EXAMPLE");
-    var div2 = document.createElement("div");
-
     
     // Nodes and Childs
 
@@ -495,7 +493,7 @@ function getQuest3() {
         buttons1.removeChild(btnli2);
         buttons1.removeChild(btnli3);
         buttons1.removeChild(btnli4);
-        // endGame();
+        endGame();
     }
 
     btn2.onclick = function QOTw(event) {
@@ -523,7 +521,7 @@ function getQuest3() {
         buttons1.removeChild(btnli2);
         buttons1.removeChild(btnli3);
         buttons1.removeChild(btnli4);
-        // endGame();
+        endGame();
     }
 
     btn3.onclick = function QOTh(event) {
@@ -552,7 +550,7 @@ function getQuest3() {
         buttons1.removeChild(btnli2);
         buttons1.removeChild(btnli3);
         buttons1.removeChild(btnli4);
-        // endGame();
+        endGame();
 
         
     }
@@ -582,10 +580,17 @@ function getQuest3() {
         buttons1.removeChild(btnli2);
         buttons1.removeChild(btnli3);
         buttons1.removeChild(btnli4);
-        // endGame();
+        endGame();
     }
 };
 
 // End Game 
 
-// endGame();
+function endGame() {
+    var hiskorz = document.createTextNode("Hi-Skorz")
+
+    QN.appendChild(hiskorz);
+    chere.removeChild(container);
+    chere.removeChild(skip);
+
+};
