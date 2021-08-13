@@ -1,3 +1,11 @@
+// Vars
+
+var QN = document.getElementById('QN');
+var QQ = document.getElementById('QQ');
+var QA1 = document.getElementById('QA1');
+var buttons1 = document.getElementById('buttons1')
+
+
 // Timer
 
 function startTimer(duration, display) {
@@ -46,18 +54,6 @@ function startTimer(duration, display) {
   });
 
   function getQuest1() {
-
-    // vars
-
-      var QN = document.getElementById('QN');
-      var QQ = document.getElementById('QQ');
-      var QA1 = document.getElementById('QA1');
-      var buttons1 = document.getElementById('buttons1')
-      var buttOne = document.getElementById('buttOne');
-      var buttTwo = document.getElementById('buttTwo');
-      var buttThree = document.getElementById('buttThree');
-      var buttFour = document.getElementById('buttFour');
-
     // Inner HTML
 
     QN.innerHTML = "Question 1";
@@ -105,9 +101,67 @@ function startTimer(duration, display) {
     btnli3.appendChild(btn3);                  
     buttons1.appendChild(btnli3); 
 
-    var btn2 = document.createElement("BUTTON"); 
-    var btnli2 = document.createElement("LI"); 
-    btn2.innerHTML = "Two";                   
-    btnli2.appendChild(btn2);                  
-    buttons1.appendChild(btnli2); 
-  }
+    var btn4 = document.createElement("BUTTON"); 
+    var btnli4 = document.createElement("LI"); 
+    btn4.innerHTML = "Four";                   
+    btnli4.appendChild(btn4);                  
+    buttons1.appendChild(btnli4); 
+
+    // Button Clicks
+
+    btn1.onclick = function QOO(event) {
+        event.preventDefault();
+        var A1 = 10;
+    
+        localStorage.removeItem("A1");
+    
+        localStorage.setItem("A1", A1);
+    
+        console.log(A1);
+        
+            
+        var allScore = document.getElementById("allScore");
+        let giveA1 = localStorage.getItem("A1")
+        allScore.innerHTML = giveA1;
+        
+
+        getQuest2();
+    }
+
+    btn2.onclick = function QOTw(event) {
+        event.preventDefault();
+        var A1 = 0;
+    
+        localStorage.removeItem("A1");
+
+        localStorage.setItem("A1", A1);
+    
+        console.log(A1);
+        getQuest2();
+    }
+
+    btn3.onclick = function QOTh(event) {
+        event.preventDefault();
+        var A1 = 0;
+    
+        localStorage.removeItem("A1");
+
+        localStorage.setItem("A1", A1);
+    
+        console.log(A1);
+        getQuest2();
+    }
+
+    btn4.onclick = function QOTh(event) {
+        event.preventDefault();
+        var A1 = 5;
+    
+        localStorage.removeItem("A1");
+
+        localStorage.setItem("A1", A1);
+    
+        console.log(A1);
+        getQuest2();
+    }
+};
+
