@@ -4,6 +4,7 @@ var QN = document.getElementById('QN');
 var QQ = document.getElementById('QQ');
 var QA1 = document.getElementById('QA1');
 var buttons1 = document.getElementById('buttons1')
+var clicks = 0;
 
 
 // Timer
@@ -53,6 +54,10 @@ function startTimer(duration, display) {
     getQuest1();
   });
 
+
+// Quest One
+
+
   function getQuest1() {
     // Inner HTML
 
@@ -78,6 +83,150 @@ function startTimer(duration, display) {
 
     var node4 = document.createElement("LI");                
     var textnode4 = document.createTextNode("William is the greatest");        
+    node4.appendChild(textnode4);                             
+    QA1.appendChild(node4); 
+
+    // Buttons
+
+    var btn1 = document.createElement("BUTTON");  
+    var btnli1 = document.createElement("LI");
+    btn1.innerHTML = "One"; 
+    btnli1.appendChild(btn1);                  
+    buttons1.appendChild(btnli1); 
+
+    var btn2 = document.createElement("BUTTON"); 
+    var btnli2 = document.createElement("LI"); 
+    btn2.innerHTML = "Two";                   
+    btnli2.appendChild(btn2);                  
+    buttons1.appendChild(btnli2); 
+
+    var btn3 = document.createElement("BUTTON");  
+    var btnli3 = document.createElement("LI");
+    btn3.innerHTML = "Three"; 
+    btnli3.appendChild(btn3);                  
+    buttons1.appendChild(btnli3); 
+
+    var btn4 = document.createElement("BUTTON"); 
+    var btnli4 = document.createElement("LI"); 
+    btn4.innerHTML = "Four";                   
+    btnli4.appendChild(btn4);                  
+    buttons1.appendChild(btnli4); 
+
+    // Button Clicks
+
+    btn1.onclick = function QOO(event) {
+        event.preventDefault();
+        var A1 = 10;
+    
+        localStorage.removeItem("A1");
+    
+        localStorage.setItem("A1", A1);
+    
+        console.log(A1);
+        
+            
+        var allScore = document.getElementById("allScore");
+        let giveA1 = localStorage.getItem("A1")
+        allScore.innerHTML = giveA1;
+        
+
+        getQuest2();
+
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
+    }
+
+    btn2.onclick = function QOTw(event) {
+        event.preventDefault();
+        var A1 = 0;
+    
+        localStorage.removeItem("A1");
+
+        localStorage.setItem("A1", A1);
+    
+        console.log(A1);
+        getQuest2();
+    }
+
+    btn3.onclick = function QOTh(event) {
+        event.preventDefault();
+        var A1 = 0;
+    
+        localStorage.removeItem("A1");
+
+        localStorage.setItem("A1", A1);
+    
+        console.log(A1);
+        getQuest2();
+    }
+
+    btn4.onclick = function QOTh(event) {
+        event.preventDefault();
+        var A1 = 5;
+    
+        localStorage.removeItem("A1");
+
+        localStorage.setItem("A1", A1);
+    
+        console.log(A1);
+        getQuest2();
+    }
+};
+
+
+// Quest One
+
+
+function getQuest2() {
+    // Inner HTML
+
+
+
+    QN.innerHTML = "Question 2";
+    QQ.innerHTML = "What is this:  ";
+
+    var divinus = document.createElement("DIV")
+    var dankCode = document.createElement("BUTTON");
+    var wordz = document.createTextNode("EXAMPLE");
+    var div2 = document.createElement("div");
+    
+    dankCode.appendChild(wordz);
+    divinus.appendChild(dankCode);
+    QQ.appendChild(divinus);
+    divinus.appendChild(div2);
+
+    dankCode.onclick = function tracking() {
+        clicks += 1;
+        console.log("clicks");
+        div2.innerHTML = clicks;
+    
+    };
+    
+    // Nodes and Childs
+
+    var node1 = document.createElement("LI");                
+    var textnode1 = document.createTextNode("Click Defusser (yes, to de-fuss)");        
+    node1.appendChild(textnode1);                             
+    QA1.appendChild(node1); 
+    
+    var node2 = document.createElement("LI");                
+    var textnode2 = document.createTextNode("Click Refractor");        
+    node2.appendChild(textnode2);                             
+    QA1.appendChild(node2); 
+
+    var node3 = document.createElement("LI");                
+    var textnode3 = document.createTextNode("Click Counter");        
+    node3.appendChild(textnode3);                             
+    QA1.appendChild(node3); 
+
+    var node4 = document.createElement("LI");                
+    var textnode4 = document.createTextNode("Click Decapitator");        
     node4.appendChild(textnode4);                             
     QA1.appendChild(node4); 
 
@@ -164,4 +313,5 @@ function startTimer(duration, display) {
         getQuest2();
     }
 };
+
 
