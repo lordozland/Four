@@ -129,17 +129,15 @@ function startTimer(duration, display) {
         let giveA1 = localStorage.getItem("A1")
         allScore.innerHTML = giveA1;
         
-
+            QA1.removeChild(node1);
+    QA1.removeChild(node2);
+    QA1.removeChild(node3);
+    QA1.removeChild(node4);
+    buttons1.removeChild(btnli1);
+    buttons1.removeChild(btnli2);
+    buttons1.removeChild(btnli3);
+    buttons1.removeChild(btnli4);
         getQuest2();
-
-        QA1.removeChild(node1);
-        QA1.removeChild(node2);
-        QA1.removeChild(node3);
-        QA1.removeChild(node4);
-        buttons1.removeChild(btnli1);
-        buttons1.removeChild(btnli2);
-        buttons1.removeChild(btnli3);
-        buttons1.removeChild(btnli4);
     }
 
     btn2.onclick = function QOTw(event) {
@@ -151,7 +149,17 @@ function startTimer(duration, display) {
         localStorage.setItem("A1", A1);
     
         console.log(A1);
+            QA1.removeChild(node1);
+    QA1.removeChild(node2);
+    QA1.removeChild(node3);
+    QA1.removeChild(node4);
+    buttons1.removeChild(btnli1);
+    buttons1.removeChild(btnli2);
+    buttons1.removeChild(btnli3);
+    buttons1.removeChild(btnli4);
         getQuest2();
+
+        
     }
 
     btn3.onclick = function QOTh(event) {
@@ -163,7 +171,17 @@ function startTimer(duration, display) {
         localStorage.setItem("A1", A1);
     
         console.log(A1);
+            QA1.removeChild(node1);
+    QA1.removeChild(node2);
+    QA1.removeChild(node3);
+    QA1.removeChild(node4);
+    buttons1.removeChild(btnli1);
+    buttons1.removeChild(btnli2);
+    buttons1.removeChild(btnli3);
+    buttons1.removeChild(btnli4);
         getQuest2();
+
+
     }
 
     btn4.onclick = function QOTh(event) {
@@ -175,7 +193,16 @@ function startTimer(duration, display) {
         localStorage.setItem("A1", A1);
     
         console.log(A1);
+            QA1.removeChild(node1);
+    QA1.removeChild(node2);
+    QA1.removeChild(node3);
+    QA1.removeChild(node4);
+    buttons1.removeChild(btnli1);
+    buttons1.removeChild(btnli2);
+    buttons1.removeChild(btnli3);
+    buttons1.removeChild(btnli4);
         getQuest2();
+
     }
 };
 
@@ -189,7 +216,7 @@ function getQuest2() {
 
 
     QN.innerHTML = "Question 2";
-    QQ.innerHTML = "What is this:  ";
+    QQ.innerHTML = "What is this: ";
 
     var divinus = document.createElement("DIV")
     var dankCode = document.createElement("BUTTON");
@@ -260,58 +287,109 @@ function getQuest2() {
 
     btn1.onclick = function QOO(event) {
         event.preventDefault();
-        var A1 = 10;
+        var A2 = 0;
     
-        localStorage.removeItem("A1");
+        localStorage.removeItem("A2");
     
-        localStorage.setItem("A1", A1);
+        localStorage.setItem("A2", A2);
     
-        console.log(A1);
+        console.log(A2);
         
             
         var allScore = document.getElementById("allScore");
-        let giveA1 = localStorage.getItem("A1")
-        allScore.innerHTML = giveA1;
+        let giveA2 = localStorage.getItem("A2")
+        allScore.innerHTML = giveA2;
         
-
-        getQuest2();
+            QA1.removeChild(node1);
+    QA1.removeChild(node2);
+    QA1.removeChild(node3);
+    QA1.removeChild(node4);
+    buttons1.removeChild(btnli1);
+    buttons1.removeChild(btnli2);
+    buttons1.removeChild(btnli3);
+    buttons1.removeChild(btnli4);
+        getQuest3();
     }
 
     btn2.onclick = function QOTw(event) {
         event.preventDefault();
-        var A1 = 0;
+        var A2 = 0;
     
-        localStorage.removeItem("A1");
-
-        localStorage.setItem("A1", A1);
+        localStorage.removeItem("A2");
     
-        console.log(A1);
-        getQuest2();
+        localStorage.setItem("A2", A2);
+    
+        console.log(A2);
+        
+            
+        var allScore = document.getElementById("allScore");
+        let giveA2 = localStorage.getItem("A2")
+        allScore.innerHTML = giveA2;
+            QA1.removeChild(node1);
+    QA1.removeChild(node2);
+    QA1.removeChild(node3);
+    QA1.removeChild(node4);
+    buttons1.removeChild(btnli1);
+    buttons1.removeChild(btnli2);
+    buttons1.removeChild(btnli3);
+    buttons1.removeChild(btnli4);
+        getQuest3();
     }
 
     btn3.onclick = function QOTh(event) {
         event.preventDefault();
-        var A1 = 0;
+        var A2 = 10;
     
-        localStorage.removeItem("A1");
+        localStorage.removeItem("A2");
+    
+        localStorage.setItem("A2", A2);
+    
+        console.log(A2);
+        
+            
+        var allScore = document.getElementById("allScore");
+        let giveA2 = localStorage.getItem("A2")
+        allScore.innerHTML = giveA2;
+            QA1.removeChild(node1);
+    QA1.removeChild(node2);
+    QA1.removeChild(node3);
+    QA1.removeChild(node4);
+    buttons1.removeChild(btnli1);
+    buttons1.removeChild(btnli2);
+    buttons1.removeChild(btnli3);
+    buttons1.removeChild(btnli4);
+        getQuest3();
 
-        localStorage.setItem("A1", A1);
-    
-        console.log(A1);
-        getQuest2();
+        
     }
 
-    btn4.onclick = function QOTh(event) {
+    btn4.onclick = function QOF(event) {
         event.preventDefault();
-        var A1 = 5;
+        var A2 = 5;
     
-        localStorage.removeItem("A1");
-
-        localStorage.setItem("A1", A1);
+        localStorage.removeItem("A2");
     
-        console.log(A1);
-        getQuest2();
+        localStorage.setItem("A2", A2);
+    
+        console.log(A2);
+        
+            
+        var allScore = document.getElementById("allScore");
+        let giveA1 = localStorage.getItem("A1")
+        let giveA2 = localStorage.getItem("A2")
+        allScore.innerHTML = (giveA2 + giveA1);
+            QA1.removeChild(node1);
+    QA1.removeChild(node2);
+    QA1.removeChild(node3);
+    QA1.removeChild(node4);
+    buttons1.removeChild(btnli1);
+    buttons1.removeChild(btnli2);
+    buttons1.removeChild(btnli3);
+    buttons1.removeChild(btnli4);
+        getQuest3();
     }
 };
 
+// End Game 
 
+// endGame();
