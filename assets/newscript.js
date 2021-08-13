@@ -4,6 +4,8 @@ var QN = document.getElementById('QN');
 var QQ = document.getElementById('QQ');
 var QA1 = document.getElementById('QA1');
 var buttons1 = document.getElementById('buttons1')
+var dip = document.getElementById('dip')
+var container = document.getElementById('container')
 var clicks = 0;
 
 
@@ -52,6 +54,7 @@ function startTimer(duration, display) {
     ogplacement.innerHTML = ogscorz;
     timerOp();
     getQuest1();
+    container.removeChild(dip)
   });
 
 
@@ -298,7 +301,7 @@ function getQuest2() {
         var allScore = document.getElementById("allScore");
         let giveA1 = localStorage.getItem("A1")
         let giveA2 = localStorage.getItem("A2")
-        let add2 = giveA1 + giveA2;
+        let add2 = giveA1 += giveA2;
         allScore.innerHTML = add2;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
@@ -325,7 +328,7 @@ function getQuest2() {
         var allScore = document.getElementById("allScore");
         let giveA1 = localStorage.getItem("A1")
         let giveA2 = localStorage.getItem("A2")
-        let add2 = giveA1 + giveA2;
+        let add2 = giveA1 += giveA2;
         allScore.innerHTML = add2;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
@@ -352,7 +355,7 @@ function getQuest2() {
         var allScore = document.getElementById("allScore");
         let giveA1 = localStorage.getItem("A1")
         let giveA2 = localStorage.getItem("A2")
-        let add2 = giveA1 + giveA2;
+        let add2 = giveA1 += giveA2;
         allScore.innerHTML = add2;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
@@ -369,7 +372,7 @@ function getQuest2() {
 
     btn4.onclick = function QOF(event) {
         event.preventDefault();
-        var A2 = 5;
+        var A2 = Number(5);
     
         localStorage.removeItem("A2");
     
@@ -379,9 +382,9 @@ function getQuest2() {
         
             
         var allScore = document.getElementById("allScore");
-        let giveA1 = localStorage.getItem("A1")
-        let giveA2 = localStorage.getItem("A2")
-        let add2 = giveA1 + giveA2;
+        let giveA1 = localStorage.getItem("A1");
+        let giveA2 = localStorage.getItem("A2");
+        let add2 = giveA1 += giveA2;
         allScore.innerHTML = add2;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
@@ -553,7 +556,7 @@ function getQuest3() {
         var allScore = document.getElementById("allScore");
         let giveA1 = localStorage.getItem("A1")
         let giveA2 = localStorage.getItem("A2")
-        allScore.innerHTML = (giveA2 + giveA1);
+        allScore.innerHTML = (giveA2 += giveA1);
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
