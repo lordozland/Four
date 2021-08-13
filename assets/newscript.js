@@ -143,6 +143,7 @@ function startTimer(duration, display) {
 
     btn2.onclick = function QOTw(event) {
         event.preventDefault();
+        localStorage.removeItem("A1");
     
         var A1 = {
             score: 0,
@@ -167,6 +168,7 @@ function startTimer(duration, display) {
 
     btn3.onclick = function QOTh(event) {
         event.preventDefault();
+        localStorage.removeItem("A1");
 
         var A1 = {
             score: 0,
@@ -191,6 +193,7 @@ function startTimer(duration, display) {
 
     btn4.onclick = function QOTh(event) {
         event.preventDefault();
+        localStorage.removeItem("A1");
 
         var A1 = {
             score: 5,
@@ -294,20 +297,19 @@ function getQuest2() {
 
     btn1.onclick = function QOO(event) {
         event.preventDefault();
-        var A2 = 0;
-    
         localStorage.removeItem("A2");
     
-        localStorage.setItem("A2", A2);
+        var A2 = {
+            score: 0,
+        };
     
-        console.log(A2);
-        
-            
+        localStorage.setItem("A2", JSON.stringify(A2));
         var allScore = document.getElementById("allScore");
-        let giveA1 = localStorage.getItem("A1")
-        let giveA2 = localStorage.getItem("A2")
-        let add2 = giveA1 += giveA2;
-        allScore.innerHTML = add2;
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        let giveA2 = JSON.parse(localStorage.getItem('A2'));
+        let add1 = giveA1.score += giveA2.score;
+        console.log(add1)
+        allScore.innerHTML = add1;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
@@ -321,20 +323,19 @@ function getQuest2() {
 
     btn2.onclick = function QOTw(event) {
         event.preventDefault();
-        var A2 = 0;
-    
         localStorage.removeItem("A2");
     
-        localStorage.setItem("A2", A2);
+        var A2 = {
+            score: 0,
+        };
     
-        console.log(A2);
-        
-            
+        localStorage.setItem("A2", JSON.stringify(A2));
         var allScore = document.getElementById("allScore");
-        let giveA1 = localStorage.getItem("A1")
-        let giveA2 = localStorage.getItem("A2")
-        let add2 = giveA1 += giveA2;
-        allScore.innerHTML = add2;
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        let giveA2 = JSON.parse(localStorage.getItem('A2'));
+        let add1 = giveA1.score += giveA2.score;
+        console.log(add1)
+        allScore.innerHTML = add1;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
@@ -347,21 +348,19 @@ function getQuest2() {
     }
 
     btn3.onclick = function QOTh(event) {
-        event.preventDefault();
-        var A2 = 10;
-    
         localStorage.removeItem("A2");
     
-        localStorage.setItem("A2", A2);
+        var A2 = {
+            score: 0,
+        };
     
-        console.log(A2);
-        
-            
+        localStorage.setItem("A2", JSON.stringify(A2));
         var allScore = document.getElementById("allScore");
-        let giveA1 = localStorage.getItem("A1")
-        let giveA2 = localStorage.getItem("A2")
-        let add2 = giveA1 += giveA2;
-        allScore.innerHTML = add2;
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        let giveA2 = JSON.parse(localStorage.getItem('A2'));
+        let add1 = giveA1.score += giveA2.score;
+        console.log(add1)
+        allScore.innerHTML = add1;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
@@ -377,20 +376,19 @@ function getQuest2() {
 
     btn4.onclick = function QOF(event) {
         event.preventDefault();
-        var A2 = Number(5);
-    
         localStorage.removeItem("A2");
     
-        localStorage.setItem("A2", A2);
+        var A2 = {
+            score: 0,
+        };
     
-        console.log(A2);
-        
-            
+        localStorage.setItem("A2", JSON.stringify(A2));
         var allScore = document.getElementById("allScore");
-        let giveA1 = localStorage.getItem("A1");
-        let giveA2 = localStorage.getItem("A2");
-        let add2 = giveA1 += giveA2;
-        allScore.innerHTML = add2;
+        let giveA1 = JSON.parse(localStorage.getItem('A1'));
+        let giveA2 = JSON.parse(localStorage.getItem('A2'));
+        let add1 = giveA1.score += giveA2.score;
+        console.log(add1)
+        allScore.innerHTML = add1;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
         QA1.removeChild(node3);
