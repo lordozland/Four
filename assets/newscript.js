@@ -9,7 +9,7 @@ var container = document.getElementById('container')
 var butters = document.getElementById('butters')
 var chere = document.getElementById('chere')
 var skip = document.getElementById('skip')
-var cells = document.getElementById('cells')
+var cells = document.getElementById('cells');
 var clicks = 0;
 
 
@@ -596,17 +596,18 @@ function endGame() {
     var hstextnode1 = document.createTextNode("HS1");  
 
 
+    chere.removeChild(butters);
     chere.removeChild(container);
     chere.removeChild(skip);
     chere.removeChild(cells);
 
     dividus.appendChild(hiskorz);
     chere.appendChild(dividus);  
-    
+
     hsnode1.appendChild(hstextnode1);     
 
     outers1.appendChild(hsnode1);
-                         
+    chere.appendChild(outers1);
     
-
+                         
 };
