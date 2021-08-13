@@ -206,7 +206,7 @@ function startTimer(duration, display) {
 };
 
 
-// Quest One
+// Quest Two
 
 
 function getQuest2() {
@@ -253,6 +253,184 @@ function getQuest2() {
 
     var node4 = document.createElement("LI");                
     var textnode4 = document.createTextNode("Click Decapitator");        
+    node4.appendChild(textnode4);                             
+    QA1.appendChild(node4); 
+
+    // Buttons
+
+    var btn1 = document.createElement("BUTTON");  
+    var btnli1 = document.createElement("LI");
+    btn1.innerHTML = "One"; 
+    btnli1.appendChild(btn1);                  
+    buttons1.appendChild(btnli1); 
+
+    var btn2 = document.createElement("BUTTON"); 
+    var btnli2 = document.createElement("LI"); 
+    btn2.innerHTML = "Two";                   
+    btnli2.appendChild(btn2);                  
+    buttons1.appendChild(btnli2); 
+
+    var btn3 = document.createElement("BUTTON");  
+    var btnli3 = document.createElement("LI");
+    btn3.innerHTML = "Three"; 
+    btnli3.appendChild(btn3);                  
+    buttons1.appendChild(btnli3); 
+
+    var btn4 = document.createElement("BUTTON"); 
+    var btnli4 = document.createElement("LI"); 
+    btn4.innerHTML = "Four";                   
+    btnli4.appendChild(btn4);                  
+    buttons1.appendChild(btnli4); 
+
+    // Button Clicks
+
+    btn1.onclick = function QOO(event) {
+        event.preventDefault();
+        var A2 = 0;
+    
+        localStorage.removeItem("A2");
+    
+        localStorage.setItem("A2", A2);
+    
+        console.log(A2);
+        
+            
+        var allScore = document.getElementById("allScore");
+        let giveA1 = localStorage.getItem("A1")
+        let giveA2 = localStorage.getItem("A2")
+        let add2 = giveA1 + giveA2;
+        allScore.innerHTML = add2;
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
+        getQuest3();
+    }
+
+    btn2.onclick = function QOTw(event) {
+        event.preventDefault();
+        var A2 = 0;
+    
+        localStorage.removeItem("A2");
+    
+        localStorage.setItem("A2", A2);
+    
+        console.log(A2);
+        
+            
+        var allScore = document.getElementById("allScore");
+        let giveA1 = localStorage.getItem("A1")
+        let giveA2 = localStorage.getItem("A2")
+        let add2 = giveA1 + giveA2;
+        allScore.innerHTML = add2;
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
+        getQuest3();
+    }
+
+    btn3.onclick = function QOTh(event) {
+        event.preventDefault();
+        var A2 = 10;
+    
+        localStorage.removeItem("A2");
+    
+        localStorage.setItem("A2", A2);
+    
+        console.log(A2);
+        
+            
+        var allScore = document.getElementById("allScore");
+        let giveA1 = localStorage.getItem("A1")
+        let giveA2 = localStorage.getItem("A2")
+        let add2 = giveA1 + giveA2;
+        allScore.innerHTML = add2;
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
+        getQuest3();
+
+        
+    }
+
+    btn4.onclick = function QOF(event) {
+        event.preventDefault();
+        var A2 = 5;
+    
+        localStorage.removeItem("A2");
+    
+        localStorage.setItem("A2", A2);
+    
+        console.log(A2);
+        
+            
+        var allScore = document.getElementById("allScore");
+        let giveA1 = localStorage.getItem("A1")
+        let giveA2 = localStorage.getItem("A2")
+        let add2 = giveA1 + giveA2;
+        allScore.innerHTML = add2;
+        QA1.removeChild(node1);
+        QA1.removeChild(node2);
+        QA1.removeChild(node3);
+        QA1.removeChild(node4);
+        buttons1.removeChild(btnli1);
+        buttons1.removeChild(btnli2);
+        buttons1.removeChild(btnli3);
+        buttons1.removeChild(btnli4);
+        getQuest3();
+    }
+};
+
+// Quest Three
+
+
+function getQuest3() {
+    // Inner HTML
+
+
+
+    QN.innerHTML = "Question 3";
+    QQ.innerHTML = "Why are JavaScript and Java Interchangible?";
+
+    var divinus = document.createElement("DIV")
+    var dankCode = document.createElement("BUTTON");
+    var wordz = document.createTextNode("EXAMPLE");
+    var div2 = document.createElement("div");
+
+    
+    // Nodes and Childs
+
+    var node1 = document.createElement("LI");                
+    var textnode1 = document.createTextNode("Both are a complete programming language");        
+    node1.appendChild(textnode1);                             
+    QA1.appendChild(node1); 
+    
+    var node2 = document.createElement("LI");                
+    var textnode2 = document.createTextNode("Both are client-side scripting languages");        
+    node2.appendChild(textnode2);                             
+    QA1.appendChild(node2); 
+
+    var node3 = document.createElement("LI");                
+    var textnode3 = document.createTextNode("Both were used in the creation of the telescope");        
+    node3.appendChild(textnode3);                             
+    QA1.appendChild(node3); 
+
+    var node4 = document.createElement("LI");                
+    var textnode4 = document.createTextNode("I don't recognize these as answers");        
     node4.appendChild(textnode4);                             
     QA1.appendChild(node4); 
 
