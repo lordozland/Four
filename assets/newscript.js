@@ -351,7 +351,7 @@ function getQuest2() {
         localStorage.removeItem("A2");
     
         var A2 = {
-            score: 0,
+            score: 10,
         };
     
         localStorage.setItem("A2", JSON.stringify(A2));
@@ -379,7 +379,7 @@ function getQuest2() {
         localStorage.removeItem("A2");
     
         var A2 = {
-            score: 0,
+            score: 5,
         };
     
         localStorage.setItem("A2", JSON.stringify(A2));
@@ -387,7 +387,8 @@ function getQuest2() {
         let giveA1 = JSON.parse(localStorage.getItem('A1'));
         let giveA2 = JSON.parse(localStorage.getItem('A2'));
         let add1 = giveA1.score += giveA2.score;
-        console.log(add1)
+        console.log(add1);
+        console.log("metal");
         allScore.innerHTML = add1;
         QA1.removeChild(node1);
         QA1.removeChild(node2);
