@@ -197,10 +197,10 @@ $( "#buttTwo" ).click(function(event) {
   });
 
   function FacePlant5() {
-    var curScoreFour = JSON.parse(localStorage.getItem("A5"));
-    if (curScoreFour !== null) {
-      document.querySelector("#Score2").textContent = curScoreFour.answer + 
-      " Current Score: " + curScoreFour.grade
+    var curScoreFive = JSON.parse(localStorage.getItem("A5"));
+    if (curScoreFive !== null) {
+      document.querySelector("#Score2").textContent = curScoreFive.answer + 
+      " Current Score: " + curScoreFive.grade
     };
     allScorz5();
   };
@@ -216,40 +216,83 @@ $( "#buttTwo" ).click(function(event) {
   };
 
 
+  $( "#buttSix" ).click(function(event) {
+    event.preventDefault();
 
+    localStorage.removeItem("A5");
+    localStorage.removeItem("A7");
+    localStorage.removeItem("A8"); 
 
-// Quiz Storage Ideas
+    var A6 = {
+        answer: An6,
+        grade: Gr6,
+    };
 
-// var student = document.getElementById("student-names");
-// var grade = document.getElementById("grades");
-// var comment = document.getElementById("msg");
-// var saveButton = document.getElementById("save");
-// var savedName = document.getElementById("saved-name");
+    localStorage.setItem("A6", JSON.stringify(A6));
+    FacePlant6();
 
-// saveButton.addEventListener("click", function(event) {
-// event.preventDefault();
+  });
 
-// var studentGrade = {
-//   student: student.value,
-//   grade: grade.value,
-//   comment: comment.value.trim()
-// };
+  function FacePlant6() {
+    var curScoreFour = JSON.parse(localStorage.getItem("A6"));
+    if (curScoreFour !== null) {
+      document.querySelector("#Score2").textContent = curScoreSix.answer + 
+      " Current Score: " + curScoreSix.grade
+    };
+    allScorz6();
+  };
 
-// localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
-// renderMessage();
+  function allScorz5() {
+    var getA5 = JSON.parse(localStorage.getItem("A5"));
+    var allScore = document.getElementById("allScore");
+    var CurSe1 = localStorage.getItem("CS1");
+    let letA5 = getA5.grade;
+    localStorage.removeItem("CS2"); 
+    localStorage.setItem("CS2", letA5);
+    allScore.innerHTML = Number(letA5) + Number(CurSe1);
+  };
 
-// });
-
-// function renderMessage() {
-//   var lastGrade = JSON.parse(localStorage.getItem("studentGrade"));
-//   if (lastGrade !== null) {
-//     document.querySelector(".message").textContent = lastGrade.student + 
-//     " received a/an " + lastGrade.grade
-//   }
-// }
 
 
 // Timer
+
+https://stackoverflow.com/questions/20618355/how-to-write-a-countdown-timer-in-javascript
+
+function startTimer(duration, display) {
+  var start = Date.now(),
+      diff,
+      minutes,
+      seconds;
+  function timer() {
+      // get the number of seconds that have elapsed since 
+      // startTimer() was called
+      diff = duration - (((Date.now() - start) / 1000) | 0);
+
+      // does the same job as parseInt truncates the float
+      minutes = (diff / 60) | 0;
+      seconds = (diff % 60) | 0;
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds; 
+
+      if (diff <= 0) {
+          // add one second so that the count down starts at the full duration
+          // example 05:00 not 04:59
+          start = Date.now() + 1000;
+      }
+  };
+  // we don't want to wait a full second before the timer starts
+  timer();
+  setInterval(timer, 1000);
+}
+
+window.onload = function () {
+  var fiveMinutes = 60 * 5,
+      display = document.querySelector('#time');
+  startTimer(fiveMinutes, display);
+};
 
 
 // Hi-Scorz
