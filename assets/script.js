@@ -47,6 +47,8 @@ $( "#buttOne" ).click(function(event) {
     localStorage.setItem("A1", JSON.stringify(A1));
     FacePlant1();
 
+    startTimer();
+
   });
 
 function FacePlant1() {
@@ -256,7 +258,7 @@ $( "#buttTwo" ).click(function(event) {
 
 // Timer
 
-https://stackoverflow.com/questions/20618355/how-to-write-a-countdown-timer-in-javascript
+// https://stackoverflow.com/questions/20618355/how-to-write-a-countdown-timer-in-javascript
 
 function startTimer(duration, display) {
   var start = Date.now(),
@@ -286,16 +288,20 @@ function startTimer(duration, display) {
   // we don't want to wait a full second before the timer starts
   timer();
   setInterval(timer, 1000);
+  timerOp();
 }
 
-window.onload = function () {
-  var fiveMinutes = 60 * 5,
+function timerOp() {
+  var twoMinutes = 60 * 2,
       display = document.querySelector('#time');
-  startTimer(fiveMinutes, display);
+  startTimer(twoMinutes, display);
 };
 
 
 // Hi-Scorz
+
+
+
 
 
 
